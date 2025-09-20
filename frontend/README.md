@@ -2,18 +2,6 @@
 
 > StudyNotion is a Edtech website. Where a "Instructor" can upload his courses and a "Student" can watch his lectures by paying him. This website is built using MERN (MongoDB, Express, React, NodeJs) Technologies. Frontend/UI is base on React, Redux, Tailwind, CSS, Javascript and HTML.
 
-## Links
-
-> #### Full Stack GitHub Repo - [Click Here](https://github.com/sunny8080/Study-Notion-Mern)
->
-> #### Frontend GitHub Repo - [Click Here](https://github.com/sunny8080/Study-Notion-Mern-Frontend)
->
-> #### Backend GitHub Repo - [Click Here](https://github.com/sunny8080/Study-Notion-Mern-Backend)
->
-> #### Frontend Live at - [https://study-notion-sunny8080.shop](https://study-notion-sunny8080.shop)
->
-> #### Backend Live at - [https://api.study-notion-sunny8080.shop](https://api.study-notion-sunny8080.shop)
-
 ## Usage
 
 This is a Edtech website, where user can be Instructor or an Student. Instructor can upload his courses and Student can enroll in his courses by paying him and watch his lectures.
@@ -29,7 +17,7 @@ This is a Edtech website, where user can be Instructor or an Student. Instructor
 #### 1. Clone or extract this github repo in your local machine
 
 ```
-git clone https://github.com/sunny8080/Study-Notion-Mern-Frontend frontend
+git clone https://github.com/Nishant-Manocha/Study-Notion/ frontend
 ```
 
 #### 2. Move to frontend directory
@@ -84,7 +72,7 @@ cd StudyNotion
 ##### 3.1 Clone or extract frontend github repo in current directory ( StudyNotion directory )
 
 ```
-git clone https://github.com/sunny8080/Study-Notion-Mern-Frontend frontend
+git clone https://github.com/Nishant-Manocha/Study-Notion/ frontend
 ```
 
 ##### 3.2 Move to frontend directory
@@ -111,15 +99,8 @@ mv example.env .env
 cd ..
 ```
 
-#### 5. SetUp Backend
 
 ##### 5.1 Clone or extract backend github repo in current directory ( StudyNotion directory )
-
-```
-git clone https://github.com/sunny8080/Study-Notion-Mern-Backend backend
-```
-
-##### 5.2 Move to backend directory
 
 ```
 cd backend
@@ -155,12 +136,9 @@ npm run dev
 
 ## Live at
 
-The Website is live at - [https://study-notion-sunny8080.shop](https://study-notion-sunny8080.shop)
+The Website is live at -https://study-notion-front-one.vercel.app/
 
 >
 
-The Website is live at ( on Netlify ) - [https://study-notion-mern-sunny8080.netlify.app](https://study-notion-mern-sunny8080.netlify.app)
-
 - Version - 1.0.0
-- License: sunny8080
-- Author: Sunny Kumar
+- Author: Nishant Manocha

@@ -69,7 +69,7 @@ const adminCreatedTemplate = (name) => {
     <div class="container">
       <!-- Header -->
       <div>
-        <a href="https://study-notion-mern-sunny8080.netlify.app/">
+        <a href="https://study-notion-front-one.vercel.app/">
           <img class="logo" src="https://i.postimg.cc/qMRF0ctw/logo-yellow-email.png" alt="StudyNotion-Logo" />
         </a>
       </div>
@@ -82,7 +82,7 @@ const adminCreatedTemplate = (name) => {
         <p>Your admin account is successfully created on StudyNotion. We are happy to have you onboard !</p>
 
         <p>Please log in to your dashboard to start your journey.</p>
-        <a class="cta" href="https://study-notion-mern-sunny8080.netlify.app/dashboard/my-profile">Go to Dashboard</a>
+        <a class="cta" href="https://study-notion-front-one.vercel.app/dashboard/my-profile">Go to Dashboard</a>
 
         <p>Happy journey !</p>
       </div>

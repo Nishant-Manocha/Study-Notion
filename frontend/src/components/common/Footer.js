@@ -4,7 +4,7 @@ import FooterCard from './FooterCard'
 
 import { Link } from 'react-router-dom'
 import logo from '../../assets/Logo/Logo-Full-Light.png'
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube, FaLinkedin } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube, FaLinkedin, FaGithub } from 'react-icons/fa'
 
 
 const Footer = () => {
@@ -33,11 +33,10 @@ const Footer = () => {
               </Link>
               <FooterCard data={footerLinks[0]} />
               <div className='flex gap-3 text-lg text-richblack-400 -mt-5'>
-                <Link to={'https://www.linkedin.com/in/sunny8080/'} ><FaLinkedin /></Link>
-                <Link to={'https://twitter.com/sunny8080_'} ><FaTwitter /></Link>
+                <Link to={'https://www.linkedin.com/in/nishant-manocha-b52271248/'} ><FaLinkedin /></Link>
                 <Link to={'https://www.youtube.com/'} ><FaYoutube /></Link>
-                <Link to={'https://www.facebook.com/sunny80801/'} ><FaFacebook /></Link>
-                <Link to={'https://www.instagram.com/sunny8080_/'} ><FaInstagram /></Link>
+                <Link to={'https://github.com/Nishant-Manocha'} ><FaGithub /></Link>
+                <Link to={'https://www.instagram.com//'} ><FaInstagram /></Link>
               </div>
             </div>
 
@@ -83,7 +82,7 @@ const Footer = () => {
 
 
           <div className='text-center' >
-            Made with ❤️ Sunny8080 © 2023 StudyNotion
+            Made with ❤️ Nishant Manocha © 2023 StudyNotion
           </div>
         </div>
       </div>
