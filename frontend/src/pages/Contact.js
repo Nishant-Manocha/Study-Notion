@@ -14,7 +14,7 @@ const Contact = () => {
   useEffect(() => {
     const fetchAllReviews = async () => {
       setLoading(true);
-      const response = await getAllReviews();
+      const response = await getAllReviews({ silent: true, attempts: 2 });
       if (response) {
         setReviews(response);
       }

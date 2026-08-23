@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
 import IconBtn from '../../../../common/IconBtn';
 import { useForm } from 'react-hook-form'
-import toast from 'react-hot-toast';
 import { MdNavigateBefore } from "react-icons/md"
 import { resetCourseState, setStep } from '../../../../../redux/slices/addCourseSlice';
 import { COURSE_STATUS } from '../../../../../utils/constants';
@@ -14,7 +13,7 @@ import { editCourseDetails } from '../../../../../services/operations/courseServ
 
 const PublishCourse = () => {
 
-  const { register, setValue, getValues, handleSubmit, formState: { errors } } = useForm();
+  const { register, setValue, getValues, handleSubmit } = useForm();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { course } = useSelector(state => state.addCourse);

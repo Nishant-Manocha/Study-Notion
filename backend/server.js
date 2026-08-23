@@ -14,7 +14,6 @@ const cloudinaryConnect = require('./config/cloudinaryConnect');
 dotenv.config({ path: './config/config.env' });
 const PORT = process.env.PORT || 4000;
 const app = express();
-connectDB();
 cloudinaryConnect();
 
 // Dev logging middleware
@@ -32,6 +31,31 @@ app.use(
 app.use(cookieParser());
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'StudyNotion API is running',
+  });
+});
+
+app.get('/api/v1/health', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'StudyNotion API is healthy',
+  });
+});
+
+// Vercel reuses warm function instances. Cache the MongoDB connection and
+// establish it only for routes that actually need database access.
+app.use('/api/v1', async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    next(error);
+  }
+});
 
 // Mount routes
 const AuthR = require('./routes/AuthR');
@@ -60,24 +84,14 @@ app.use('/api/v1/courseprogress', CourseProgressR);
 
 app.use(errorHandler); // must be after mounting the routes
 
-app.get('/', (req, res) => {
-  res.send('Hello ji');
-});
+if (require.main === module) {
+  app.listen(PORT, (err) => {
+    if (err) {
+      clgDev('Error occurred creating server');
+      process.exit(1);
+    }
+    clgDev(`Server is running on ${PORT}`.yellow.underline.bold);
+  });
+}
 
-app.listen(PORT, (err) => {
-  if (err) {
-    clgDev('Error occurred creating server');
-    process.exit();
-  }
-  clgDev(`Server in running on ${PORT}`.yellow.underline.bold);
-});
-
-// TODO : check for these, what it is
-/**
- * // handle unhandled promise rejection
- * process.on("unhandledRejection", (err, promise) => {
- *  clgDev(`Error : ${err.message}`.red);
- *  // close server & exit process
- *  server.close(()=>process.exit(1));
- * });
- */
+module.exports = app;

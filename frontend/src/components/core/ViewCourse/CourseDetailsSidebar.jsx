@@ -1,15 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import IconBtn from '../../common/IconBtn';
-import { useNavigate } from 'react-router-dom';
 import { IoIosArrowBack } from 'react-icons/io'
 import SectionAccordion from './SectionAccordion';
 import { Link } from 'react-router-dom';
 
 const CourseDetailsSidebar = ({ currentOpenSection, setCurrentOpenSection, currentSubSection, setCurrentSubSection, setIsOpenReviewModal }) => {
   const { courseData, completedVideos, totalNoOfVideos } = useSelector(state => state.viewCourse);
-  const navigate = useNavigate();
-
   return (
     <div className='bg-richblack-800 w-full h-full flex border-r border-richblack-700' >
       <div className='flex flex-col w-full h-full' >

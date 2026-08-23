@@ -13,7 +13,7 @@ import { createSection, updateSection } from '../../../../../services/operations
 
 
 const CourseBuilderForm = () => {
-  const { register, setValue, getValues, handleSubmit, formState: { errors } } = useForm();
+  const { register, setValue, handleSubmit, formState: { errors } } = useForm();
   const dispatch = useDispatch();
   const { course } = useSelector(state => state.addCourse);
   const [loading, setLoading] = useState(false);
