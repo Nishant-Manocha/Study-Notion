@@ -22,7 +22,6 @@ import secToDurationFormatter from '../utils/secToDurationFormatter';
 import { BsDot } from 'react-icons/bs'
 import CourseSectionAccordion from '../components/core/Course/CourseSectionAccordion';
 import { buyCourses } from '../services/operations/paymentServices';
-import { getAllReviews } from '../services/operations/otherServices';
 import ReviewsSlider from '../components/common/ReviewsSlider';
 
 

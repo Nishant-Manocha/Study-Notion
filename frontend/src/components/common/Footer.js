@@ -4,7 +4,7 @@ import FooterCard from './FooterCard'
 
 import { Link } from 'react-router-dom'
 import logo from '../../assets/Logo/Logo-Full-Light.png'
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube, FaLinkedin, FaGithub } from 'react-icons/fa'
+import { FaInstagram, FaYoutube, FaLinkedin, FaGithub } from 'react-icons/fa'
 
 
 const Footer = () => {

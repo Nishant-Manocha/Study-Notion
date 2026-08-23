@@ -1,8 +1,6 @@
 import './App.css';
-import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
-import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
+import './styles/swiper.css';
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
 import LogIn from './pages/LogIn'
 import SignUp from './pages/SignUp'
@@ -20,10 +18,6 @@ import MyProfile from './components/core/Dashboard/MyProfile';
 import Settings from './components/core/Dashboard/Settings/Settings';
 import Cart from './components/core/Dashboard/Cart/Cart';
 import EnrolledCourses from './components/core/Dashboard/EnrolledCourses';
-// eslint-disable-next-line
-import PurchaseHistory from './components/core/Dashboard/PurchaseHistory';
-// eslint-disable-next-line
-import { ROLE_TYPE } from './utils/constants';
 import InstructorDashboard from './components/core/Dashboard/InstructorDashboard/InstructorDashboard';
 import InstructorMyCourses from './components/core/Dashboard/InstructorMyCourses/InstructorMyCourses';
 import AddCourse from './components/core/Dashboard/AddCourse/AddCourse';
@@ -36,12 +30,6 @@ import ViewCourse from './pages/ViewCourse';
 
 
 function App() {
-
-  const { token } = useSelector(state => state.auth);
-
-  // eslint-disable-next-line
-  const { user } = useSelector(state => state.profile);
-
   return (
     <div className="bg-richblack-900 w-screen min-h-screen flex flex-col font-inter">
       <Navbar />

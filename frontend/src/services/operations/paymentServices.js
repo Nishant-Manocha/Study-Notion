@@ -93,7 +93,7 @@ export const buyCourses = async (courses, user, token, cartResetTrue, dispatch, 
 export const createOrder = async (courses, token) => {
   const toastId = toast.loading('Sending contact details ...');
   try {
-    const response = await apiConnector(
+    await apiConnector(
       'POST',
       paymentApi.POST_CREATE_ORDER_API,
       { courses },

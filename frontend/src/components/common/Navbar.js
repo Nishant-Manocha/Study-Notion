@@ -7,7 +7,6 @@ import { useLocation } from 'react-router-dom'
 import { AiOutlineShoppingCart, AiOutlineLogin, AiOutlineHome, AiOutlineContacts } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux'
 import ProfileDropDown from '../core/Auth/ProfileDropDown'
-import { toast } from 'react-hot-toast'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import HamburgerMenu from './HamburgerMenu'
 import { VscDashboard, VscSignOut, VscSignIn } from "react-icons/vsc"
@@ -34,14 +33,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const fetchCatalog = async () => {
-      const toastId = toast.loading('Loading Backend ...');
-      const result = await getAllCategories();
-      if (result) {
-        setCatalogs(result)
-      } else {
-        toast.error('Failed to load backend');
-      }
-      toast.dismiss(toastId);
+      const result = await getAllCategories({ silent: true, attempts: 2 });
+      setCatalogs(result)
       setLoading2(false);
     }
     fetchCatalog();

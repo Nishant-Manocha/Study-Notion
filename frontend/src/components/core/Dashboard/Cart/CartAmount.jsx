@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import IconBtn from '../../../common/IconBtn'
-import { toast } from 'react-hot-toast'
 import { buyCourses } from '../../../../services/operations/paymentServices'
 
 const CartAmount = () => {
@@ -15,8 +14,15 @@ const CartAmount = () => {
   const [loading, setLoading] = useState(false);
 
   const handleBuyCourse = async () => {
+    if (loading) return;
+
+    setLoading(true);
     const courses = cartItems.map(course => course._id);
-    await buyCourses(courses, user, token, true, dispatch, navigate);
+    try {
+      await buyCourses(courses, user, token, true, dispatch, navigate);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (

@@ -2,11 +2,6 @@ import React from 'react'
 import ReviewCard from './ReviewCard'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/css';
-import "swiper/css/free-mode"
-import 'swiper/css/pagination';
-
 // import required modules
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 
